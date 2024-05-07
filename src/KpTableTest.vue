@@ -17,7 +17,7 @@ export default {
     KpTable
   },
   data() {
-    document.title = '测试页面'
+    document.title = 'Table测试页面'
     return {
       tableFields: [
         {label: '姓名', prop: 'name'},
