@@ -5,7 +5,8 @@
         :tableFields="tableFields" 
         :total="total" 
         :pageSize="pageSize" 
-        @currentPageEvt="handlePageChanged"/>
+        @currentPageEvt="handlePageChanged"
+        :loading="loading"/>
   </div>
 </template>
 
@@ -33,7 +34,8 @@ export default {
         {name: '刘源' , address: '黑龙江省哈尔滨市', age: '29', remark: '测试5'}
       ],
       total: 1000,
-      pageSize: 10
+      pageSize: 10,
+      loading: false
     }
   },
 

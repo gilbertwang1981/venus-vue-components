@@ -9,7 +9,7 @@
                     <el-divider content-position="center"><h2>{{ header }}</h2></el-divider>
                 </div>
                 <div>
-                    <el-table :data="tableData" style="width: 100%">
+                    <el-table :data="tableData" style="width: 100%" v-loading="loading">
                         <el-table-column v-for="(column , index) in tableFields" :key="index" :prop="column.prop" :label="column.label" width="180"/>
                     </el-table>
                 </div>
@@ -40,7 +40,8 @@
             tableData: Array,
             tableFields: Array,
             total: Number,
-            pageSize: Number
+            pageSize: Number,
+            loading: Boolean
         },
         methods: {
             handlePageChanged(val) {
